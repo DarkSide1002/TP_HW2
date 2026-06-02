@@ -35,8 +35,8 @@ class Recipe:
         for ing in self.ingredients:
             if ing == ingredient:
                 ing.quantity += ingredient.quantity
-            else:
-                self.ingredients.append(ingredient)
+                return
+        self.ingredients.append(ingredient)
     
     @staticmethod
     def is_valid_ratio(ratio) -> bool:
@@ -44,7 +44,7 @@ class Recipe:
             return ratio > 0
         return False
     
-    def scale(self, ratio: float) -> Recipe:
+    def scale(self, ratio: float) -> "Recipe":
         if not self.is_valid_ratio(ratio):
             raise ValueError("ratio должен быть положительным числом")
         mult_ing = []
