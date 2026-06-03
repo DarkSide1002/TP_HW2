@@ -1,11 +1,12 @@
 __pycache__/
+.pytest_cache/
 *.pyc
 *.pyo
 *.pyd
 venv/
 .venv/
 
-idea/
+.idea/
 .vscode/
 
 .DS_Store
