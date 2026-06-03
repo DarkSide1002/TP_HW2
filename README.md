@@ -11,20 +11,14 @@
 Склонируйте репозиторий и перейдите в папку проекта, а также установите зависимости:
 
 ```bash
-git clone https://github.com/DarkSide1002/TP_HW2.git
+git clone https://github.com/DarkSide1002/TP_HW2
 cd TP_HW2
 pip install -r requirements.txt
 ```
 
 ## Использование
 
-Основная реализация находится в файле `classes_homework2.py`.
-
-Пример запуска файла:
-
-```bash
-python3 classes_homework2.py
-```
+Весь важный материал, а именно классы находятся в модуле classes_homework2.py, при необходимости импортируйте классы оттуда
 
 Запуск тестов:
 
