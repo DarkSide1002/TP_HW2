@@ -29,7 +29,10 @@ class Ingredient:
 class Recipe:
     def __init__(self, title: str, ingredients: list) -> None:
         self.title = title
-        self.ingredients = ingredients
+        self.ingredients = []
+
+        for ing in ingredients:
+                self.add_ingredient(ing)
     
     def add_ingredient(self, ingredient: Ingredient) -> None:
         for ing in self.ingredients:
@@ -101,8 +104,8 @@ class ShoppingList:
     
 
 class DietaryRecipe(Recipe):
-    def __init__(self, title: str, diet_type: str, ingredients: list = []) -> None:
-        super().__init__(title, ingredients)
+    def __init__(self, title: str, diet_type: str, ingredients: list = None) -> None:
+        super().__init__(title, ingredients if ingredients is not None else [])
         self.diet_type = diet_type
     
     def scale(self, ratio: float) -> "DietaryRecipe":
